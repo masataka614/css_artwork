@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sakura</title>
+</head>
+<body>
+    <div class="base" id="base"></div>
+    <script>
+        const elements = document.createDocumentFragment();
+
+            for (let y = 0; y < 10; y++) {
+                const rowDiv = document.createElement("div");
+                rowDiv.className = "row";
+
+                for (let x = 0; x < 10; x++) {
+                    const containerDiv = document.createElement("div");
+                    const petalDiv = document.createElement("div");
+
+                    let petalClassNmame = "petal ";
+
+                    if (x < 3) {
+                        if (y < 3) {
+                            petalClassNmame += "top";
+                        } else {
+                            petalClassNmame += "middle";
+                        }
+                    } else if (x < 6) {
+                        petalClassNmame += "middle";
+                    } else {
+                        if (y < 9) {
+                            petalClassNmame += "middle";
+                        }
+                    }
+
+                    const topVal = Math.floor(Math.random() * 30) - 10;
+                    const leftVal = Math.floor(Math.random() * 30) - 10;
+                    const transformVal = Math.floor(Math.random() * 360);
+
+                    petalDiv.style = 
+                        "top:" +
+                        topVal.toString() +
+                        "px;" +
+                        "left:" +
+                        leftVal.toString() +
+                        "px;" +
+                        "transform: rotate(" +
+                        transformVal.toString() +
+                        "deg);";
+
+                    containerDiv.className = "container";
+                    petalDiv.className = petalClassNmame;
+
+                    containerDiv.appendChild(petalDiv);
+                    rowDiv.appendChild(containerDiv);
+                    elements.appendChild(rowDiv);
+                }
+            }
+
+        document.getElementById("base").appendChild(elements);
+    </script>
+    <style>
+        .base {
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(
+                130deg,
+                #ffffff,
+                #fdf9fa,
+                #fdf6f8,
+                #fdf2f5,
+                #fdeff2,
+                #fef4f4
+            );
+        }
+        .row {
+            display: flex;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+        }
+        .petal {
+            position: relative;
+            width: 10px;
+            height: 30px;
+        }
+        .petal:before,
+        .petal:after {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 20px;
+            border-radius: 50%;
+            transform: rotate(-7deg);
+            transform-origin: 0 100%;
+        }
+        .petal:after {
+            transform: rotate(7deg);
+            transform-origin: 100% 100%;
+        }
+        .petal.top:before,
+        .petal.top:after {
+            background-color: #feecec;
+        }
+        .petal.middle:before,
+        .petal.middle:after {
+            background-color: #fef0f0;
+        }
+    </style>
+</body>
+</html>
