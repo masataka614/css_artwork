@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rose</title>
+</head>
+<body>
+    <div class="base" id="base">
+        <div class="rose">
+            <div class="petal a"></div>
+            <div class="petal b"></div>
+            <div class="petal c"></div>
+            <div class="petal d"></div>
+            <div class="petal e"></div>
+            <div class="petal f"></div>
+            <div class="petal g"></div>
+            <div class="petal h"></div>
+            <div class="petal i"></div>
+            <div class="petal j"></div>
+            <div class="petal k"></div>
+            <div class="petal l"></div>
+            <div class="petal m"></div>
+            <div class="petal n"></div>
+            <div class="petal o"></div>
+            <div class="petal p"></div>
+        </div>
+    </div>
+    <script>
+        const elements = document.createDocumentFragment();
+
+        for (let y = 0; y < 8; y++) {
+            const rowDiv = document.createElement("div");
+            rowDiv.className = "row";
+
+            for (let x = 0; x < 9; x++) {
+                const containerDiv = document.createElement("div");
+                const petalDiv = document.createElement("div");
+
+                let petalClassNmame = "leaf";
+
+                const transformVal = Math.floor(Math.random() * 360);
+
+                petalDiv.style =
+                    "transform: rotate(" +
+                    transformVal.toString() +
+                    "deg);";
+
+                containerDiv.className = "container";
+                petalDiv.className = petalClassNmame;
+
+                containerDiv.appendChild(petalDiv);
+                rowDiv.appendChild(containerDiv);
+                elements.appendChild(rowDiv);
+            }
+        }
+
+        document.getElementById("base").appendChild(elements);
+    </script>
+    <style>
+        .base {
+            position: absolute;
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+            background-color: #316654;
+            background: linear-gradient(
+                130deg,
+                #316654,
+                #433d3c
+            );
+            overflow: hidden;
+        }
+        .row {
+            display: flex;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+        }
+        .leaf {
+            position: relative;
+            border-left: 1px solid #534b4a;
+            content: "";
+            width: 50px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .rose {
+            position: absolute;
+            top: 120px;
+            left: 150px;
+            width: 100px;
+            height: 100px;
+            z-index: 1;
+        }
+        .rose .petal {
+            position: absolute;
+        }
+        .rose .petal:before,
+        .rose .petal:after {
+            position: absolute;
+            background-color: #f8b500;
+            background: linear-gradient(
+                330deg,
+                #e45e32,
+                #f8b500
+            );
+            border-top: 1px solid #9ea1a3;
+            /* border-right: 1px solid #9ea1a3; */
+            content: "";
+            border-radius: 50% 50% 50% 50%/40% 40% 60% 60%;
+            transform: rotate(-20deg);
+            transform-origin: 0 100%;
+        }
+        .rose .petal:after {
+            left: -20px;
+            transform: rotate(20deg);
+            transform-origin: 100% 100%;
+        }
+        .rose .petal.a {
+            transform: rotate(-20deg);
+        }
+        .rose .petal.a:before,
+        .rose .petal.a:after {
+            width: 80px;
+            height: 100px;
+        }
+        .rose .petal.b {
+            transform: rotate(40deg);
+            top: -10px;
+            left: 75px;
+        }
+        .rose .petal.b:before,
+        .rose .petal.b:after {
+            width: 80px;
+            height: 100px;
+        }
+        .rose .petal.c {
+            transform: rotate(110deg);
+            top: 65px;
+            left: 135px;
+        }
+        .rose .petal.c:before,
+        .rose .petal.c:after {
+            width: 80px;
+            height: 100px;
+        }
+        .rose .petal.d {
+            transform: rotate(180deg);
+            top: 145px;
+            left: 90px;
+        }
+        .rose .petal.d:before,
+        .rose .petal.d:after {
+            width: 80px;
+            height: 100px;
+        }
+        .rose .petal.e {
+            transform: rotate(220deg);
+            top: 140px;
+            left: 10px;
+        }
+        .rose .petal.e:before,
+        .rose .petal.e:after {
+            width: 80px;
+            height: 100px;
+        }
+        .rose .petal.f {
+            transform: rotate(300deg);
+            top: 55px;
+            left: -40px;
+        }
+        .rose .petal.f:before,
+        .rose .petal.f:after {
+            width: 80px;
+            height: 100px;
+        }
+        .rose .petal.g {
+            transform: rotate(10deg);
+            top: -10px;
+            left: 40px;
+        }
+        .rose .petal.g:before,
+        .rose .petal.g:after {
+            width: 50px;
+            height: 100px;
+        }
+        .rose .petal.h {
+            transform: rotate(50deg);
+            top: 20px;
+            left: 95px;
+        }
+        .rose .petal.h:before,
+        .rose .petal.h:after {
+            width: 50px;
+            height: 100px;
+        }
+        .rose .petal.i {
+            transform: rotate(120deg);
+            top: 90px;
+            left: 110px;
+        }
+        .rose .petal.i:before,
+        .rose .petal.i:after {
+            width: 50px;
+            height: 100px;
+        }
+        .rose .petal.j {
+            transform: rotate(180deg);
+            top: 130px;
+            left: 40px;
+        }
+        .rose .petal.j:before,
+        .rose .petal.j:after {
+            width: 50px;
+            height: 100px;
+        }
+        .rose .petal.k {
+            transform: rotate(250deg);
+            top: 90px;
+            left: -20px;
+        }
+        .rose .petal.k:before,
+        .rose .petal.k:after {
+            width: 50px;
+            height: 70px;
+        }
+        .rose .petal.l {
+            transform: rotate(-40deg);
+            top: 30px;
+            left: 0px;
+        }
+        .rose .petal.l:before,
+        .rose .petal.l:after {
+            width: 50px;
+            height: 70px;
+        }
+        .rose .petal.m {
+            transform: rotate(50deg);
+            top: 30px;
+            left: 70px;
+        }
+        .rose .petal.m:before,
+        .rose .petal.m:after {
+            width: 50px;
+            height: 70px;
+        }
+        .rose .petal.n {
+            transform: rotate(140deg);
+            top: 90px;
+            left: 70px;
+        }
+        .rose .petal.n:before,
+        .rose .petal.n:after {
+            width: 50px;
+            height: 70px;
+        }
+        .rose .petal.o {
+            transform: rotate(-70deg);
+            top: 70px;
+            left: -5px;
+        }
+        .rose .petal.o:before,
+        .rose .petal.o:after {
+            width: 50px;
+            height: 60px;
+        }
+        .rose .petal.p {
+            transform: rotate(70deg);
+            top: 50px;
+            left: 50px;
+        }
+        .rose .petal.p:before,
+        .rose .petal.p:after {
+            width: 45px;
+            height: 40px;
+        }
+    </style>
+</body>
+</html>
