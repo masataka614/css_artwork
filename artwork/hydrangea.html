@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hydrangea</title>
+</head>
+<body>
+    <div class="base" id="base">
+        <div class="rain"></div>
+    </div>
+    <script>
+        const elements = document.createDocumentFragment();
+
+        for (let a = 0; a < 2; a++) {
+            const hydrangeaDiv = document.createElement("div");
+            hydrangeaDiv.className = "hydrangea h-" + a.toString();
+
+            for (let b = 0; b < 60; b++) {
+                const petalDiv = document.createElement("div");
+                petalDiv.className = "petal p-" + b.toString();
+
+                const petalChildTopDiv = document.createElement("div");
+                petalChildTopDiv.className = "child top";
+
+                const petalChildLeftDiv = document.createElement("div");
+                petalChildLeftDiv.className = "child left";
+
+                const petalChildRightDiv = document.createElement("div");
+                petalChildRightDiv.className = "child right";
+
+                const petalChildBottomDiv = document.createElement("div");
+                petalChildBottomDiv.className = "child bottom";
+
+                petalDiv.appendChild(petalChildTopDiv);
+                petalDiv.appendChild(petalChildLeftDiv);
+                petalDiv.appendChild(petalChildRightDiv);
+                petalDiv.appendChild(petalChildBottomDiv);
+
+                hydrangeaDiv.appendChild(petalDiv);
+
+                elements.appendChild(hydrangeaDiv);
+            }
+        }
+
+        for (let c = 0; c < 200; c++) {
+            const rainDiv = document.createElement("div");
+            rainDiv.className = "rain";
+
+            const topVal = Math.floor(Math.random() * 500);
+            const leftVal = Math.floor(Math.random() * 500);
+
+
+            rainDiv.style =
+                "top:" +
+                topVal.toString() +
+                "px;" +
+                "left:" + 
+                leftVal.toString() +
+                "px;";
+
+            elements.appendChild(rainDiv);
+        }
+
+        document.getElementById("base").appendChild(elements);
+    </script>
+    <style>
+        .base {
+            position: absolute;
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(
+                212deg,
+                #9ea1a3,
+                #698aab 63%,
+                #316654,
+                #433d3c
+            );
+            overflow: hidden;
+        }
+        .rain {
+            position: absolute;
+            border-left: 1px solid #dddcd6;
+            width: 1px;
+            height: 30px;
+            transform: rotate(20deg);
+            z-index: 3;
+        }
+        .hydrangea {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+        .hydrangea.h-0 {
+            top: 220px;
+            z-index: 2;
+            transform: rotateX(20deg) rotateY(20deg);
+        }
+        .hydrangea.h-1 {
+            top: 280px;
+            left: 150px;
+            z-index: 1;
+            transform: scale(0.75) rotateY(30deg);
+        }
+        .hydrangea .petal {
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            width: 45px;
+            height: 40px;
+            transform: rotate(45deg);
+        }
+        .hydrangea .petal.p-0{
+            left: 70px;
+            transform: rotate(10deg);
+        }
+        .hydrangea .petal.p-1{
+            top: 5px;
+            left: 110px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-2{
+            top: 25px;
+            left: 140px;
+            transform: rotate(50deg);
+        }
+        .hydrangea .petal.p-3{
+            top: 55px;
+            left: 170px;
+            transform: rotate(60deg);
+        }
+        .hydrangea .petal.p-4{
+            top: 95px;
+            left: 180px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-5{
+            top: 140px;
+            left: 170px;
+            transform: rotate(40deg);
+        }
+        .hydrangea .petal.p-6{
+            top: 170px;
+            left: 150px;
+            transform: rotate(40deg);
+        }
+        .hydrangea .petal.p-7{
+            top: 190px;
+            left: 120px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-8{
+            top: 200px;
+            left: 90px;
+            transform: rotate(10deg);
+        }
+        .hydrangea .petal.p-9{
+            top: 195px;
+            left: 50px;
+            transform: rotate(60deg);
+        }
+        .hydrangea .petal.p-10{
+            top: 180px;
+            left: 10px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-11{
+            top: 150px;
+            left: -20px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-12{
+            top: 115px;
+            left: -20px;
+            transform: rotate(10deg);
+        }
+        .hydrangea .petal.p-12{
+            top: 115px;
+            left: -20px;
+            transform: rotate(10deg);
+        }
+        .hydrangea .petal.p-13{
+            top: 80px;
+            left: -15px;
+            transform: rotate(40deg);
+        }
+        .hydrangea .petal.p-14{
+            top: 45px;
+            left: 0px;
+            transform: rotate(60deg);
+        }
+        .hydrangea .petal.p-15{
+            top: 10px;
+            left: 30px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-16{
+            top: 20px;
+            left: 55px;
+            transform: rotate(10deg);
+        }
+        .hydrangea .petal.p-17{
+            top: 20px;
+            left: 95px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-18{
+            top: 40px;
+            left: 135px;
+            transform: rotate(40deg);
+        }
+        .hydrangea .petal.p-19{
+            top: 75px;
+            left: 167px;
+            transform: rotate(50deg);
+        }
+        .hydrangea .petal.p-20{
+            top: 70px;
+            left: 160px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-21{
+            top: 105px;
+            left: 160px;
+            transform: rotate(45deg);
+        }
+        .hydrangea .petal.p-22{
+            top: 140px;
+            left: 145px;
+            transform: rotate(60deg);
+        }
+        .hydrangea .petal.p-23{
+            top: 160px;
+            left: 130px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-24{
+            top: 180px;
+            left: 105px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-25{
+            top: 190px;
+            left: 70px;
+            transform: rotate(45deg);
+        }
+        .hydrangea .petal.p-26{
+            top: 180px;
+            left: 30px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-27{
+            top: 160px;
+            left: 0px;
+            transform: rotate(10deg);
+        }
+        .hydrangea .petal.p-28{
+            top: 130px;
+            left: -10px;
+            transform: rotate(10deg);
+        }
+        .hydrangea .petal.p-29{
+            top: 100px;
+            left: -10px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-30{
+            top: 100px;
+            left: -10px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-31{
+            top: 70px;
+            left: -0px;
+            transform: rotate(60deg);
+        }
+        .hydrangea .petal.p-32{
+            top: 35px;
+            left: 20px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-33{
+            top: 40px;
+            left: 40px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-34{
+            top: 40px;
+            left: 75px;
+            transform: rotate(80deg);
+        }
+        .hydrangea .petal.p-35{
+            top: 40px;
+            left: 110px;
+            transform: rotate(40deg);
+        }
+        .hydrangea .petal.p-36{
+            top: 60px;
+            left: 130px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-37{
+            top: 90px;
+            left: 130px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-38{
+            top: 120px;
+            left: 140px;
+            transform: rotate(60deg);
+        }
+        .hydrangea .petal.p-39{
+            top: 140px;
+            left: 130px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-40{
+            top: 160px;
+            left: 100px;
+            transform: rotate(10deg);
+        }
+        .hydrangea .petal.p-41{
+            top: 170px;
+            left: 60px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-42{
+            top: 160px;
+            left: 30px;
+            transform: rotate(60deg);
+        }
+        .hydrangea .petal.p-43{
+            top: 140px;
+            left: 10px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-44{
+            top: 110px;
+            left: 10px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-45{
+            top: 80px;
+            left: 20px;
+            transform: rotate(90deg);
+        }
+        .hydrangea .petal.p-46{
+            top: 60px;
+            left: 40px;
+            transform: rotate(40deg);
+        }
+        .hydrangea .petal.p-47{
+            top: 60px;
+            left: 60px;
+            transform: rotate(40deg);
+        }
+        .hydrangea .petal.p-48{
+            top: 60px;
+            left: 95px;
+            transform: rotate(70deg);
+        }
+        .hydrangea .petal.p-49{
+            top: 80px;
+            left: 110px;
+            transform: rotate(50deg);
+        }
+        .hydrangea .petal.p-50{
+            top: 110px;
+            left: 120px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-51{
+            top: 140px;
+            left: 100px;
+            transform: rotate(80deg);
+        }
+        .hydrangea .petal.p-52{
+            top: 150px;
+            left: 70px;
+            transform: rotate(20deg);
+        }
+        .hydrangea .petal.p-53{
+            top: 140px;
+            left: 45px;
+            transform: rotate(10deg);
+        }
+        .hydrangea .petal.p-54{
+            top: 110px;
+            left: 35px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-55{
+            top: 90px;
+            left: 55px;
+            transform: rotate(45deg);
+        }
+        .hydrangea .petal.p-56{
+            top: 80px;
+            left: 80px;
+            transform: rotate(10deg);
+        }
+        .hydrangea .petal.p-57{
+            top: 100px;
+            left: 90px;
+            transform: rotate(30deg);
+        }
+        .hydrangea .petal.p-58{
+            top: 120px;
+            left: 80px;
+            transform: rotate(50deg);
+        }
+        .hydrangea .petal.p-59{
+            top: 110px;
+            left: 60px;
+            transform: rotate(50deg);
+        }
+        .hydrangea .petal .child {
+            width: 20px;
+            height: 20px;
+            border-radius: 20% 20% 20% 50%;
+            background: linear-gradient(
+                45deg,
+                #bbc8e6,
+                #ebf6f7
+            );
+        }
+        .hydrangea .petal .child.top {
+            transform: rotate(90deg);
+        }
+        .hydrangea .petal .child.left {
+            transform: rotate(180deg);
+        }
+        .hydrangea .petal .child.bottom {
+            transform: rotate(-90deg);
+        }
+        .hydrangea .petal .child.right {
+            transform: rotate(0deg);
+        }
+    </style>
+</body>
+</html>
