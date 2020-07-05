@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cicada</title>
+</head>
+<body>
+    <div class="base" id="base"></div>
+    <script>
+        const elements = document.createDocumentFragment();
+
+        let leftVal = -35;
+
+        for (let y = 0; y < 10; y++) {
+            const rowDiv = document.createElement("div");
+
+            if (y % 2 === 0) {
+                rowDiv.className = "row-even";
+            } else {
+                rowDiv.className = "row-odd";
+            }
+
+            rowDiv.style = "left:" + leftVal.toString() + "px;";
+            leftVal += 52;
+
+            let topVal = -20;
+
+            for (let x = 0; x < 8; x++) {
+                const cicada = document.createElement("div");
+                const head = document.createElement("div");
+                const back = document.createElement("div");
+                const wing = document.createElement("div");
+                const belly = document.createElement("div");
+                const wingLeft = document.createElement("div");
+                const wingRight = document.createElement("div");
+                const bellyLeft = document.createElement("div");
+                const bellyRight = document.createElement("div");
+
+                if (y % 2 === 0) {
+                    cicada.className = "cicada even c-" + x.toString();
+                } else {
+                    cicada.className = "cicada odd c-" + x.toString();
+                }
+
+                
+                head.className = "head";
+                back.className = "back";
+                wing.className = "wing";
+                belly.className = "belly";
+                wingLeft.className = "left";
+                wingRight.className = "right";
+                bellyLeft.className = "left";
+                bellyRight.className = "right";
+
+                cicada.style = "top:" + topVal.toString() + "px;";
+                topVal += 90;
+
+                wing.appendChild(wingLeft);
+                wing.appendChild(wingRight);
+                belly.appendChild(bellyLeft);
+                belly.appendChild(bellyRight);
+
+                cicada.appendChild(head);
+                cicada.appendChild(back);
+                cicada.appendChild(wing);
+                cicada.appendChild(belly);
+
+                rowDiv.appendChild(cicada);
+            }
+
+            elements.appendChild(rowDiv);
+        }
+
+        document.getElementById("base").appendChild(elements);
+    </script>
+    <style>
+        .base {
+            position: absolute;
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+        }
+        .row-even {
+            position: absolute;
+            top: 0px;
+        }
+        .row-odd {
+            position: absolute;
+            top: -2px;
+        }
+        .cicada.even {
+            position: absolute;
+            transform: scale(0.3) rotate(0deg);
+        }
+        .cicada.odd {
+            position: absolute;
+            transform: scale(0.3) rotateX(180deg);
+        }
+        .cicada .head {
+            position: absolute;
+            z-index: 3;
+            top: 100px;
+            left: 100px;
+            width: 100px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 40px solid #eb9b6f;
+        }
+        .cicada .head:after {
+            position: absolute;
+            top: 40px;
+            left: -20px;
+            width: 0px;
+            height: 0;
+            content: "";
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-top: 60px solid #eb9b6f;
+        }
+        .cicada .back {
+            position: absolute;
+            z-index: 2;
+            transform: scale(1.16);
+            top: 120px;
+            left: 100px;
+            width: 100px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 40px solid #ffffff;
+        }
+        .cicada .back:after {
+            position: absolute;
+            top: 39px;
+            left: -20px;
+            width: 0px;
+            height: 0;
+            content: "";
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-top: 60px solid #ffffff;
+        }
+        .cicada .wing .left {
+            position: absolute;
+            z-index: 1;
+            transform: rotate(-18deg);
+            top: 140px;
+            left: 31px;
+            width: 0;
+            height: 0;
+            border-left: 90px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 90px solid #eb9b6f;
+        }
+        .cicada .wing .left:after {
+            position: absolute;
+            z-index: 1;
+            transform: rotate(-90deg);
+            top: 94px;
+            left: -95px;
+            width: 0;
+            height: 0;
+            content: "";
+            border-right: 130px solid #eb9b6f;
+            border-top: 60px solid transparent;
+            border-bottom: 60px solid transparent;
+        }
+        .cicada .wing .right {
+            position: absolute;
+            z-index: 1;
+            transform: rotate(18deg);
+            top: 140px;
+            left: 199px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 90px solid transparent;
+            border-bottom: 90px solid #eb9b6f;
+        }
+        .cicada .wing .right:after {
+            position: absolute;
+            z-index: 1;
+            transform: rotate(90deg);
+            top: 94px;
+            left: -34px;
+            width: 0;
+            height: 0;
+            content: "";
+            border-left: 130px solid #eb9b6f;
+            border-top: 60px solid transparent;
+            border-bottom: 60px solid transparent;
+        }
+        .cicada .belly .left {
+            position: absolute;
+            z-index: 0;
+            transform: skewY(-40deg);
+            top: 200px;
+            left: 170px;
+            width: 70px;
+            height: 70px;
+            background-color: #e0815e;
+
+        }
+        .cicada .belly .right {
+            position: absolute;
+            z-index: 0;
+            transform: skewY(40deg);
+            top: 200px;
+            left: 100px;
+            width: 70px;
+            height: 70px;
+            background-color: #e0815e;
+        }
+    </style>
+</body>
+</html>
