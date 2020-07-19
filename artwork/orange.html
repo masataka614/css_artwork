@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>orange</title>
+</head>
+<body>
+    <div class="base">
+        <div class="orange-1">
+            <div class="orange-2">
+                <div class="orange-3">
+                    <div class="orange-4">
+                        <div class="leaf"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .base {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+        }
+        .orange-1 {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+            height: 400px;
+            border-radius: 13%;
+            background-color: #68be8d;
+        }
+        .orange-2 {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            border-radius: 25%;
+            background-color: #028760;
+        }
+        .orange-3 {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            border-radius: 38%;
+            background-color: #b8d200;
+        }
+        .orange-4 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #f08300;
+        }
+        .leaf {
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            border-radius: 90% 10%;
+            transform: rotate(10deg);
+            top: -10px;
+            left: 43px;
+            z-index: 1;
+            background-color: #007b43;
+        }
+    </style>
+</body>
+</html>
