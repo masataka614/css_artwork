@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dragonfly</title>
+</head>
+<body>
+    <div class="base" id="base">
+    </div>
+    <script>
+        const elements = document.createDocumentFragment();
+
+        let leftVal = -45;
+
+        for (let x = 0; x < 11; x++) {
+            const colDiv = document.createElement("div");
+
+            if (x % 2 === 0) {
+                colDiv.className = "col-even";
+            } else {
+                colDiv.className = "col-odd";
+            }
+
+            colDiv.style = "left:" + leftVal.toString() + "px;";
+            leftVal += 50;
+
+            let topVal = -45;
+
+            for (let y = 0; y < 8; y++) {
+                const dragonfly = document.createElement("div");
+                const eyeLeft = document.createElement("div");
+                const eyeRight = document.createElement("div");
+                const body = document.createElement("div");
+                const wingLeftTop = document.createElement("div");
+                const wingLeftBotoom = document.createElement("div");
+                const wingRightTop = document.createElement("div");
+                const wingRightBottom = document.createElement("div");
+
+                dragonfly.className = "dragonfly";
+
+                eyeLeft.className = "eye e-left background-" + x.toString();
+                eyeRight.className = "eye e-right background-" + x.toString();
+                body.className = "body background-" + x.toString();
+                wingLeftTop.className = "wing w-left w-top background-" + x.toString();
+                wingLeftBotoom.className = "wing w-left w-bottom background-" + x.toString();
+                wingRightTop.className = "wing w-right w-top background-" + x.toString();
+                wingRightBottom.className = "wing w-right w-bottom background-" + x.toString();
+
+                dragonfly.style = "top:" + topVal.toString() + "px;";
+
+                topVal += 70;
+
+                dragonfly.appendChild(eyeLeft);
+                dragonfly.appendChild(eyeRight);
+                dragonfly.appendChild(body);
+                dragonfly.appendChild(wingLeftTop);
+                dragonfly.appendChild(wingLeftBotoom);
+                dragonfly.appendChild(wingRightTop);
+                dragonfly.appendChild(wingRightBottom);
+
+                colDiv.appendChild(dragonfly);
+            }
+
+            elements.appendChild(colDiv);
+        }
+
+        document.getElementById("base").appendChild(elements);
+    </script>
+    <style>
+        .base {
+            position: absolute;
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #eb6101
+            );
+        }
+        .col-even {
+            position: absolute;
+            top: 0px;
+        }
+        .col-odd {
+            position: absolute;
+            top: 34px;
+        }
+        .dragonfly {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            transform: scale(0.4) rotate(90deg);
+        }
+        .dragonfly * {
+            background-color: #000000;
+        }
+        .dragonfly *.background-0 {
+            background-color: #eb6101;
+        }
+        .dragonfly *.background-1 {
+            background-color: #ed6d23;
+        }
+        .dragonfly *.background-2 {
+            background-color: #ef7d41;
+        }
+        .dragonfly *.background-3 {
+            background-color: #f28d5a;
+        }
+        .dragonfly *.background-4 {
+            background-color: #f59d72;
+        }
+        .dragonfly *.background-5 {
+            background-color: #f5a37a;
+        }
+        .dragonfly *.background-6 {
+            background-color: #f8bd9f;
+        }
+        .dragonfly *.background-7 {
+            background-color: #fbccb6;
+        }
+        .dragonfly *.background-8 {
+            background-color: #fcdccc;
+        }
+        .dragonfly *.background-9 {
+            background-color: #fdebe3;
+        }
+        .dragonfly *.background-10 {
+            background-color: #ffffff;
+        }
+        .dragonfly .eye {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dragonfly .eye.e-left {
+            left: 38px;
+        }
+        .dragonfly .eye.e-right {
+            left: 52px;
+        }
+        .dragonfly .body {
+            position: absolute;
+            width: 10px;
+            height: 80px;
+            top: 12px;
+            left: 45px;
+            border-radius: 15px / 30px;
+        }
+        .dragonfly .wing {
+            position: absolute;
+            width: 60px;
+            height: 10px;
+            border-radius: 30px / 15px;
+        }
+        .dragonfly .wing.w-top {
+            top: 17px;
+        }
+        .dragonfly .wing.w-bottom {
+            top: 33px;
+        }
+        .dragonfly .wing.w-left {
+            left: -20px;
+        }
+        .dragonfly .wing.w-right {
+            left: 59px;
+        }
+    </style>
+</body>
+</html>
