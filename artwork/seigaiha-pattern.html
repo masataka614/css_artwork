@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>seigaiha-pattern</title>
+</head>
+<body>
+    <div class="base">
+        <div class="layout-body" id="layout-body"></div>
+    </div>
+    <script>
+        const elements = document.createDocumentFragment();
+
+        let leftVal = -25;
+
+        for (let y = 0; y < 38; y++) {
+            const rowDiv = document.createElement("div");
+
+            let className = "odd";
+            if (y % 2 === 0) {
+                className = "even";
+            }
+
+            rowDiv.className = "row " + className;
+
+            rowDiv.style = "left:" + leftVal.toString() + "px;";
+
+            leftVal += 14;
+
+            let topVal = -30;
+
+            for (let x = 0; x < 11; x++) {
+                const circle6Div = document.createElement("div");
+                const circle5Div = document.createElement("div");
+                const circle4Div = document.createElement("div");
+                const circle3Div = document.createElement("div");
+                const circle2Div = document.createElement("div");
+                const circle1Div = document.createElement("div");
+
+                circle6Div.className = "circle c-6 child-center";
+                circle5Div.className = "circle c-5 child-center";
+                circle4Div.className = "circle c-4 child-center";
+                circle3Div.className = "circle c-3 child-center";
+                circle2Div.className = "circle c-2 child-center";
+                circle1Div.className = "circle c-1";
+
+                circle6Div.style = "top:" + topVal.toString() + "px;";
+                topVal += 60;
+
+                circle2Div.appendChild(circle1Div);
+                circle3Div.appendChild(circle2Div);
+                circle4Div.appendChild(circle3Div);
+                circle5Div.appendChild(circle4Div);
+                circle6Div.appendChild(circle5Div);
+                rowDiv.appendChild(circle6Div);
+            }
+
+            elements.appendChild(rowDiv);
+        }
+
+        document.getElementById("layout-body").appendChild(elements);
+    </script>
+    <style>
+        .base {
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            overflow: hidden;
+        }
+        .layout-body {
+            position: absolute;
+            left: 491px;
+            transform: rotate(90deg);
+        }
+        .row {
+            position: absolute;
+        }
+        .row.odd {
+            top: 30px;
+        }
+        .child-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circle {
+            border-radius: 50%;
+        }
+        .circle.c-6 {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            background-color: #84a2d4;
+        }
+        .circle.c-5 {
+            width: 50px;
+            height: 50px;
+            background-color: #f4b3c2;
+        }
+        .circle.c-4 {
+            width: 40px;
+            height: 40px;
+            background-color: #84a2d4;
+        }
+        .circle.c-3 {
+            width: 30px;
+            height: 30px;
+            background-color: #f4b3c2;
+        }
+        .circle.c-2 {
+            width: 20px;
+            height: 20px;
+            background-color: #84a2d4;
+        }
+        .circle.c-1 {
+            width: 10px;
+            height: 10px;
+            background-color: #f4b3c2;
+        }
+
+    </style>
+</body>
+</html>
