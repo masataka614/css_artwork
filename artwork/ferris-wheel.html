@@ -1,0 +1,3191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ferris-wheel</title>
+</head>
+<body>
+    <div class="base" id="base">
+    </div>
+    <script>
+        const elements = document.createDocumentFragment();
+
+        let leftVal = 0;
+
+        for (let x = 0; x < 25; x++) {
+            const rowDiv = document.createElement("div");
+
+            rowDiv.className = "row";
+
+            rowDiv.style = "left:" + leftVal.toString() + "px;";
+
+            leftVal += 20;
+
+            for (let y = 0; y < 25; y++) {
+                const colDiv = document.createElement("div");
+                const contentDiv = document.createElement("div");
+
+                const coordinate = "y-" + y + "x-" + x;
+
+                colDiv.className = "col";
+                contentDiv.className = "content " + coordinate;
+
+                colDiv.appendChild(contentDiv);
+                rowDiv.appendChild(colDiv);
+            }
+
+            elements.appendChild(rowDiv);
+        }
+
+        document.getElementById("base").appendChild(elements);
+    </script>
+    <style>
+        .base {
+            position: absolute;
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+            background-color: #e7e7eb;
+        }
+        .row {
+            position: absolute;
+        }
+        .col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        .content {
+            border-radius: 50%;
+        }
+        .y-0x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #5a7fb2;
+        }
+        .y-0x-1{
+            width: 7px;
+            height: 7px;
+            background-color: #5a7fb2;
+        }
+        .y-0x-2{
+            width: 7px;
+            height: 7px;
+            background-color: #597fb2;
+        }
+        .y-0x-3{
+            width: 7px;
+            height: 7px;
+            background-color: #597fb2;
+        }
+        .y-0x-4{
+            width: 7px;
+            height: 7px;
+            background-color: #587cad;
+        }
+        .y-0x-5{
+            width: 7px;
+            height: 7px;
+            background-color: #587bac;
+        }
+        .y-0x-6{
+            width: 7px;
+            height: 7px;
+            background-color: #5e7dac;
+        }
+        .y-0x-7{
+            width: 7px;
+            height: 7px;
+            background-color: #7188b0;
+        }
+        .y-0x-8{
+            width: 7px;
+            height: 7px;
+            background-color: #6082b3;
+        }
+        .y-0x-9{
+            width: 7px;
+            height: 7px;
+            background-color: #5980b3;
+        }
+        .y-0x-10{
+            width: 7px;
+            height: 7px;
+            background-color: #6282ad;
+        }
+        .y-0x-11{
+            width: 7px;
+            height: 7px;
+            background-color: #757b8d;
+        }
+        .y-0x-12{
+            width: 7px;
+            height: 7px;
+            background-color: #697287;
+        }
+        .y-0x-13{
+            width: 7px;
+            height: 7px;
+            background-color: #58769c;
+        }
+        .y-0x-14{
+            width: 7px;
+            height: 7px;
+            background-color: #597fb1;
+        }
+        .y-0x-15{
+            width: 7px;
+            height: 7px;
+            background-color: #577aac;
+        }
+        .y-0x-16{
+            width: 7px;
+            height: 7px;
+            background-color: #577aac;
+        }
+        .y-0x-17{
+            width: 7px;
+            height: 7px;
+            background-color: #577aac;
+        }
+        .y-0x-18{
+            width: 7px;
+            height: 7px;
+            background-color: #577db0;
+        }
+        .y-0x-19{
+            width: 7px;
+            height: 7px;
+            background-color: #5880b4;
+        }
+        .y-0x-20{
+            width: 7px;
+            height: 7px;
+            background-color: #5880b4;
+        }
+        .y-0x-21{
+            width: 7px;
+            height: 7px;
+            background-color: #5880b4;
+        }
+        .y-0x-22{
+            width: 7px;
+            height: 7px;
+            background-color: #5880b4;
+        }
+        .y-0x-23{
+            width: 7px;
+            height: 7px;
+            background-color: #5881b4;
+        }
+        .y-0x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #5880b4;
+        }
+        .y-1x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #5c82b4;
+        }
+        .y-1x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #5c82b4;
+        }
+        .y-1x-2{
+            width: 8px;
+            height: 8px;
+            background-color: #5c82b4;
+        }
+        .y-1x-3{
+            width: 8px;
+            height: 8px;
+            background-color: #5d82b3;
+        }
+        .y-1x-4{
+            width: 8px;
+            height: 8px;
+            background-color: #5f80ae;
+        }
+        .y-1x-5{
+            width: 8px;
+            height: 8px;
+            background-color: #6d84ac;
+        }
+        .y-1x-6{
+            width: 8px;
+            height: 8px;
+            background-color: #7388ad;
+        }
+        .y-1x-7{
+            width: 8px;
+            height: 8px;
+            background-color: #6785b1;
+        }
+        .y-1x-8{
+            width: 8px;
+            height: 8px;
+            background-color: #6184b4;
+        }
+        .y-1x-9{
+            width: 8px;
+            height: 8px;
+            background-color: #6a7ea2;
+        }
+        .y-1x-10{
+            width: 8px;
+            height: 8px;
+            background-color: #6a616c;
+        }
+        .y-1x-11{
+            width: 8px;
+            height: 8px;
+            background-color: #5d5d7b;
+        }
+        .y-1x-12{
+            width: 8px;
+            height: 8px;
+            background-color: #626588;
+        }
+        .y-1x-13{
+            width: 8px;
+            height: 8px;
+            background-color: #5a5b77;
+        }
+        .y-1x-14{
+            width: 8px;
+            height: 8px;
+            background-color: #4f5a72;
+        }
+        .y-1x-15{
+            width: 8px;
+            height: 8px;
+            background-color: #587aa7;
+        }
+        .y-1x-16{
+            width: 8px;
+            height: 8px;
+            background-color: #597dae;
+        }
+        .y-1x-17{
+            width: 8px;
+            height: 8px;
+            background-color: #587cae;
+        }
+        .y-1x-18{
+            width: 8px;
+            height: 8px;
+            background-color: #597fb2;
+        }
+        .y-1x-19{
+            width: 8px;
+            height: 8px;
+            background-color: #5a83b6;
+        }
+        .y-1x-20{
+            width: 8px;
+            height: 8px;
+            background-color: #5a83b6;
+        }
+        .y-1x-21{
+            width: 8px;
+            height: 8px;
+            background-color: #5a83b6;
+        }
+        .y-1x-22{
+            width: 8px;
+            height: 8px;
+            background-color: #5a83b6;
+        }
+        .y-1x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #5a83b6;
+        }
+        .y-1x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #5a83b6;
+        }
+        .y-2x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #6085b5;
+        }
+        .y-2x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #6887b3;
+        }
+        .y-2x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #6b88b3;
+        }
+        .y-2x-3{
+            width: 9px;
+            height: 9px;
+            background-color: #778db3;
+        }
+        .y-2x-4{
+            width: 9px;
+            height: 9px;
+            background-color: #7288ae;
+        }
+        .y-2x-5{
+            width: 9px;
+            height: 9px;
+            background-color: #7689ad;
+        }
+        .y-2x-6{
+            width: 9px;
+            height: 9px;
+            background-color: #6d85ad;
+        }
+        .y-2x-7{
+            width: 9px;
+            height: 9px;
+            background-color: #6184b3;
+        }
+        .y-2x-8{
+            width: 9px;
+            height: 9px;
+            background-color: #6683ae;
+        }
+        .y-2x-9{
+            width: 9px;
+            height: 9px;
+            background-color: #696376;
+        }
+        .y-2x-10{
+            width: 9px;
+            height: 9px;
+            background-color: #5e6789;
+        }
+        .y-2x-11{
+            width: 9px;
+            height: 9px;
+            background-color: #6c779e;
+        }
+        .y-2x-12{
+            width: 9px;
+            height: 9px;
+            background-color: #70789d;
+        }
+        .y-2x-13{
+            width: 9px;
+            height: 9px;
+            background-color: #747ba1;
+        }
+        .y-2x-14{
+            width: 9px;
+            height: 9px;
+            background-color: #6a6d8f;
+        }
+        .y-2x-15{
+            width: 9px;
+            height: 9px;
+            background-color: #4e536b;
+        }
+        .y-2x-16{
+            width: 9px;
+            height: 9px;
+            background-color: #5a7eae;
+        }
+        .y-2x-17{
+            width: 9px;
+            height: 9px;
+            background-color: #5a7faf;
+        }
+        .y-2x-18{
+            width: 9px;
+            height: 9px;
+            background-color: #5b82b4;
+        }
+        .y-2x-19{
+            width: 9px;
+            height: 9px;
+            background-color: #5c85b8;
+        }
+        .y-2x-20{
+            width: 9px;
+            height: 9px;
+            background-color: #5c85b8;
+        }
+        .y-2x-21{
+            width: 9px;
+            height: 9px;
+            background-color: #5c85b8;
+        }
+        .y-2x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #5d85b8;
+        }
+        .y-2x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #5c85b8;
+        }
+        .y-2x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #5d86b8;
+        }
+        .y-3x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #6788b5;
+        }
+        .y-3x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #6989b5;
+        }
+        .y-3x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #6f8bb5;
+        }
+        .y-3x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #798fb4;
+        }
+        .y-3x-4{
+            width: 10px;
+            height: 10px;
+            background-color: #6986b0;
+        }
+        .y-3x-5{
+            width: 10px;
+            height: 10px;
+            background-color: #5f82b0;
+        }
+        .y-3x-6{
+            width: 10px;
+            height: 10px;
+            background-color: #5f82b0;
+        }
+        .y-3x-7{
+            width: 10px;
+            height: 10px;
+            background-color: #6085b5;
+        }
+        .y-3x-8{
+            width: 10px;
+            height: 10px;
+            background-color: #717086;
+        }
+        .y-3x-9{
+            width: 10px;
+            height: 10px;
+            background-color: #5c6181;
+        }
+        .y-3x-10{
+            width: 10px;
+            height: 10px;
+            background-color: #697ba2;
+        }
+        .y-3x-11{
+            width: 10px;
+            height: 10px;
+            background-color: #68769b;
+        }
+        .y-3x-12{
+            width: 10px;
+            height: 10px;
+            background-color: #6a7a9c;
+        }
+        .y-3x-13{
+            width: 10px;
+            height: 10px;
+            background-color: #727a99;
+        }
+        .y-3x-14{
+            width: 10px;
+            height: 10px;
+            background-color: #737b9f;
+        }
+        .y-3x-15{
+            width: 10px;
+            height: 10px;
+            background-color: #686785;
+        }
+        .y-3x-16{
+            width: 10px;
+            height: 10px;
+            background-color: #506283;
+        }
+        .y-3x-17{
+            width: 10px;
+            height: 10px;
+            background-color: #5c81b0;
+        }
+        .y-3x-18{
+            width: 10px;
+            height: 10px;
+            background-color: #5d84b5;
+        }
+        .y-3x-19{
+            width: 10px;
+            height: 10px;
+            background-color: #5f87b9;
+        }
+        .y-3x-20{
+            width: 10px;
+            height: 10px;
+            background-color: #5f88ba;
+        }
+        .y-3x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #5f87b9;
+        }
+        .y-3x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #5f86b8;
+        }
+        .y-3x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #5f85b6;
+        }
+        .y-3x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #5f84b3;
+        }
+        .y-4x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #658ab8;
+        }
+        .y-4x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #648ab8;
+        }
+        .y-4x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #6489b8;
+        }
+        .y-4x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #6489b8;
+        }
+        .y-4x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #6285b2;
+        }
+        .y-4x-5{
+            width: 11px;
+            height: 11px;
+            background-color: #6084b2;
+        }
+        .y-4x-6{
+            width: 11px;
+            height: 11px;
+            background-color: #6084b2;
+        }
+        .y-4x-7{
+            width: 11px;
+            height: 11px;
+            background-color: #6884ac;
+        }
+        .y-4x-8{
+            width: 11px;
+            height: 11px;
+            background-color: #686479;
+        }
+        .y-4x-9{
+            width: 11px;
+            height: 11px;
+            background-color: #677ba1;
+        }
+        .y-4x-10{
+            width: 11px;
+            height: 11px;
+            background-color: #69799d;
+        }
+        .y-4x-11{
+            width: 11px;
+            height: 11px;
+            background-color: #687fa2;
+        }
+        .y-4x-12{
+            width: 11px;
+            height: 11px;
+            background-color: #6c87ac;
+        }
+        .y-4x-13{
+            width: 11px;
+            height: 11px;
+            background-color: #748cae;
+        }
+        .y-4x-14{
+            width: 11px;
+            height: 11px;
+            background-color: #7081a0;
+        }
+        .y-4x-15{
+            width: 11px;
+            height: 11px;
+            background-color: #6c7698;
+        }
+        .y-4x-16{
+            width: 11px;
+            height: 11px;
+            background-color: #626179;
+        }
+        .y-4x-17{
+            width: 11px;
+            height: 11px;
+            background-color: #5b78a2;
+        }
+        .y-4x-18{
+            width: 11px;
+            height: 11px;
+            background-color: #5f85b5;
+        }
+        .y-4x-19{
+            width: 11px;
+            height: 11px;
+            background-color: #6087b6;
+        }
+        .y-4x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #6085b5;
+        }
+        .y-4x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #6184b3;
+        }
+        .y-4x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #6184b2;
+        }
+        .y-4x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #6184b2;
+        }
+        .y-4x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #6084b1;
+        }
+        .y-5x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #668cb9;
+        }
+        .y-5x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #658cb9;
+        }
+        .y-5x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #658bb9;
+        }
+        .y-5x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #658bb9;
+        }
+        .y-5x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #6387b4;
+        }
+        .y-5x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #6286b4;
+        }
+        .y-5x-6{
+            width: 12px;
+            height: 12px;
+            background-color: #6186b4;
+        }
+        .y-5x-7{
+            width: 12px;
+            height: 12px;
+            background-color: #727991;
+        }
+        .y-5x-8{
+            width: 12px;
+            height: 12px;
+            background-color: #616b8a;
+        }
+        .y-5x-9{
+            width: 12px;
+            height: 12px;
+            background-color: #66799b;
+        }
+        .y-5x-10{
+            width: 12px;
+            height: 12px;
+            background-color: #687c9c;
+        }
+        .y-5x-11{
+            width: 12px;
+            height: 12px;
+            background-color: #6d87a9;
+        }
+        .y-5x-12{
+            width: 12px;
+            height: 12px;
+            background-color: #7088a9;
+        }
+        .y-5x-13{
+            width: 12px;
+            height: 12px;
+            background-color: #7b8fac;
+        }
+        .y-5x-14{
+            width: 12px;
+            height: 12px;
+            background-color: #788dac;
+        }
+        .y-5x-15{
+            width: 12px;
+            height: 12px;
+            background-color: #707e9f;
+        }
+        .y-5x-16{
+            width: 12px;
+            height: 12px;
+            background-color: #6a7291;
+        }
+        .y-5x-17{
+            width: 12px;
+            height: 12px;
+            background-color: #606b89;
+        }
+        .y-5x-18{
+            width: 12px;
+            height: 12px;
+            background-color: #6286b3;
+        }
+        .y-5x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #6186b3;
+        }
+        .y-5x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #6185b3;
+        }
+        .y-5x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #6085b2;
+        }
+        .y-5x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #6084b2;
+        }
+        .y-5x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #6186b3;
+        }
+        .y-5x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #6288b6;
+        }
+        .y-6x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #688eba;
+        }
+        .y-6x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #678ebb;
+        }
+        .y-6x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #678ebb;
+        }
+        .y-6x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #678dba;
+        }
+        .y-6x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #6589b6;
+        }
+        .y-6x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #6489b5;
+        }
+        .y-6x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #6488b5;
+        }
+        .y-6x-7{
+            width: 13px;
+            height: 13px;
+            background-color: #6e6880;
+        }
+        .y-6x-8{
+            width: 13px;
+            height: 13px;
+            background-color: #647ca1;
+        }
+        .y-6x-9{
+            width: 13px;
+            height: 13px;
+            background-color: #697d9e;
+        }
+        .y-6x-10{
+            width: 13px;
+            height: 13px;
+            background-color: #6880a1;
+        }
+        .y-6x-11{
+            width: 13px;
+            height: 13px;
+            background-color: #707b95;
+        }
+        .y-6x-12{
+            width: 13px;
+            height: 13px;
+            background-color: #72788f;
+        }
+        .y-6x-13{
+            width: 13px;
+            height: 13px;
+            background-color: #7d7d91;
+        }
+        .y-6x-14{
+            width: 13px;
+            height: 13px;
+            background-color: #77809a;
+        }
+        .y-6x-15{
+            width: 13px;
+            height: 13px;
+            background-color: #7186a5;
+        }
+        .y-6x-16{
+            width: 13px;
+            height: 13px;
+            background-color: #737f9e;
+        }
+        .y-6x-17{
+            width: 13px;
+            height: 13px;
+            background-color: #635e77;
+        }
+        .y-6x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #6084b0;
+        }
+        .y-6x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #6389b6;
+        }
+        .y-6x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #648bb9;
+        }
+        .y-6x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #668dbb;
+        }
+        .y-6x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #678ebc;
+        }
+        .y-6x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #678fbd;
+        }
+        .y-6x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #678fbe;
+        }
+        .y-7x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #698eb9;
+        }
+        .y-7x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #698fbb;
+        }
+        .y-7x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #698eba;
+        }
+        .y-7x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #698eba;
+        }
+        .y-7x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #678bb6;
+        }
+        .y-7x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #678bb6;
+        }
+        .y-7x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #6e83a8;
+        }
+        .y-7x-7{
+            width: 14px;
+            height: 14px;
+            background-color: #64637a;
+        }
+        .y-7x-8{
+            width: 14px;
+            height: 14px;
+            background-color: #627595;
+        }
+        .y-7x-9{
+            width: 14px;
+            height: 14px;
+            background-color: #677c9c;
+        }
+        .y-7x-10{
+            width: 14px;
+            height: 14px;
+            background-color: #667591;
+        }
+        .y-7x-11{
+            width: 14px;
+            height: 14px;
+            background-color: #72778f;
+        }
+        .y-7x-12{
+            width: 14px;
+            height: 14px;
+            background-color: #867f91;
+        }
+        .y-7x-13{
+            width: 14px;
+            height: 14px;
+            background-color: #847e90;
+        }
+        .y-7x-14{
+            width: 14px;
+            height: 14px;
+            background-color: #808299;
+        }
+        .y-7x-15{
+            width: 14px;
+            height: 14px;
+            background-color: #757f9c;
+        }
+        .y-7x-16{
+            width: 14px;
+            height: 14px;
+            background-color: #7585a1;
+        }
+        .y-7x-17{
+            width: 14px;
+            height: 14px;
+            background-color: #647290;
+        }
+        .y-7x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #627a9f;
+        }
+        .y-7x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #6991be;
+        }
+        .y-7x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #6991bf;
+        }
+        .y-7x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #6991bf;
+        }
+        .y-7x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #6992bf;
+        }
+        .y-7x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #6992bf;
+        }
+        .y-7x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #6a92bf;
+        }
+        .y-8x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #6a8eb7;
+        }
+        .y-8x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #698db7;
+        }
+        .y-8x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #698cb6;
+        }
+        .y-8x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #698db6;
+        }
+        .y-8x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #698db6;
+        }
+        .y-8x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #698db6;
+        }
+        .y-8x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #7481a0;
+        }
+        .y-8x-7{
+            width: 14px;
+            height: 14px;
+            background-color: #697997;
+        }
+        .y-8x-8{
+            width: 15px;
+            height: 15px;
+            background-color: #667c9d;
+        }
+        .y-8x-9{
+            width: 15px;
+            height: 15px;
+            background-color: #627795;
+        }
+        .y-8x-10{
+            width: 15px;
+            height: 15px;
+            background-color: #717d99;
+        }
+        .y-8x-11{
+            width: 15px;
+            height: 15px;
+            background-color: #75788f;
+        }
+        .y-8x-12{
+            width: 15px;
+            height: 15px;
+            background-color: #737a90;
+        }
+        .y-8x-13{
+            width: 15px;
+            height: 15px;
+            background-color: #7e889e;
+        }
+        .y-8x-14{
+            width: 15px;
+            height: 15px;
+            background-color: #878ba1;
+        }
+        .y-8x-15{
+            width: 15px;
+            height: 15px;
+            background-color: #7c86a0;
+        }
+        .y-8x-16{
+            width: 15px;
+            height: 15px;
+            background-color: #7385a3;
+        }
+        .y-8x-17{
+            width: 14px;
+            height: 14px;
+            background-color: #6e7693;
+        }
+        .y-8x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #677797;
+        }
+        .y-8x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #6c94c0;
+        }
+        .y-8x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #6c94c0;
+        }
+        .y-8x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #6c94c0;
+        }
+        .y-8x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #6c94c0;
+        }
+        .y-8x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #6c94c0;
+        }
+        .y-8x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #6d94c0;
+        }
+        .y-9x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #6d90b7;
+        }
+        .y-9x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #6c8fb7;
+        }
+        .y-9x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #6b8fb7;
+        }
+        .y-9x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #6c8fb7;
+        }
+        .y-9x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #6c8fb6;
+        }
+        .y-9x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #6c8fb6;
+        }
+        .y-9x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #72819f;
+        }
+        .y-9x-7{
+            width: 14px;
+            height: 14px;
+            background-color: #6c7790;
+        }
+        .y-9x-8{
+            width: 15px;
+            height: 15px;
+            background-color: #7389aa;
+        }
+        .y-9x-9{
+            width: 16px;
+            height: 16px;
+            background-color: #7288a7;
+        }
+        .y-9x-10{
+            width: 16px;
+            height: 16px;
+            background-color: #727e98;
+        }
+        .y-9x-11{
+            width: 16px;
+            height: 16px;
+            background-color: #748099;
+        }
+        .y-9x-12{
+            width: 16px;
+            height: 16px;
+            background-color: #768aa6;
+        }
+        .y-9x-13{
+            width: 16px;
+            height: 16px;
+            background-color: #8292aa;
+        }
+        .y-9x-14{
+            width: 16px;
+            height: 16px;
+            background-color: #8692a9;
+        }
+        .y-9x-15{
+            width: 16px;
+            height: 16px;
+            background-color: #7e849a;
+        }
+        .y-9x-16{
+            width: 15px;
+            height: 15px;
+            background-color: #7b859f;
+        }
+        .y-9x-17{
+            width: 14px;
+            height: 14px;
+            background-color: #7187a7;
+        }
+        .y-9x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #6a738e;
+        }
+        .y-9x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #7096c1;
+        }
+        .y-9x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #7096c1;
+        }
+        .y-9x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #7096c1;
+        }
+        .y-9x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #7097c2;
+        }
+        .y-9x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #7097c2;
+        }
+        .y-9x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #7097c2;
+        }
+        .y-10x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #7293b9;
+        }
+        .y-10x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #7395ba;
+        }
+        .y-10x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #7596bc;
+        }
+        .y-10x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #7596bc;
+        }
+        .y-10x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #7091b7;
+        }
+        .y-10x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #7092b8;
+        }
+        .y-10x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #75778f;
+        }
+        .y-10x-7{
+            width: 14px;
+            height: 14px;
+            background-color: #7788a6;
+        }
+        .y-10x-8{
+            width: 15px;
+            height: 15px;
+            background-color: #798ba5;
+        }
+        .y-10x-9{
+            width: 16px;
+            height: 16px;
+            background-color: #7886a2;
+        }
+        .y-10x-10{
+            width: 17px;
+            height: 17px;
+            background-color: #7e8ca6;
+        }
+        .y-10x-11{
+            width: 17px;
+            height: 17px;
+            background-color: #7b8aa4;
+        }
+        .y-10x-12{
+            width: 17px;
+            height: 17px;
+            background-color: #79889f;
+        }
+        .y-10x-13{
+            width: 17px;
+            height: 17px;
+            background-color: #8793a8;
+        }
+        .y-10x-14{
+            width: 17px;
+            height: 17px;
+            background-color: #8594ab;
+        }
+        .y-10x-15{
+            width: 16px;
+            height: 16px;
+            background-color: #848b9f;
+        }
+        .y-10x-16{
+            width: 15px;
+            height: 15px;
+            background-color: #7c8ba6;
+        }
+        .y-10x-17{
+            width: 14px;
+            height: 14px;
+            background-color: #75859f;
+        }
+        .y-10x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #70748c;
+        }
+        .y-10x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #7798c0;
+        }
+        .y-10x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #779ac2;
+        }
+        .y-10x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #7599c2;
+        }
+        .y-10x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #7599c2;
+        }
+        .y-10x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #779ac2;
+        }
+        .y-10x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #789ac1;
+        }
+        .y-11x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #7d9bbd;
+        }
+        .y-11x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #7d9bbd;
+        }
+        .y-11x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #7d9bbe;
+        }
+        .y-11x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #7b99bd;
+        }
+        .y-11x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #7394b8;
+        }
+        .y-11x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #7394b8;
+        }
+        .y-11x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #787084;
+        }
+        .y-11x-7{
+            width: 14px;
+            height: 14px;
+            background-color: #79849b;
+        }
+        .y-11x-8{
+            width: 15px;
+            height: 15px;
+            background-color: #7f95b3;
+        }
+        .y-11x-9{
+            width: 16px;
+            height: 16px;
+            background-color: #7d93b1;
+        }
+        .y-11x-10{
+            width: 17px;
+            height: 17px;
+            background-color: #7d89a0;
+        }
+        .y-11x-11{
+            width: 18px;
+            height: 18px;
+            background-color: #76849c;
+        }
+        .y-11x-12{
+            width: 18px;
+            height: 18px;
+            background-color: #808a9c;
+        }
+        .y-11x-13{
+            width: 18px;
+            height: 18px;
+            background-color: #868c99;
+        }
+        .y-11x-14{
+            width: 17px;
+            height: 17px;
+            background-color: #848c9d;
+        }
+        .y-11x-15{
+            width: 16px;
+            height: 16px;
+            background-color: #808ca3;
+        }
+        .y-11x-16{
+            width: 15px;
+            height: 15px;
+            background-color: #78859f;
+        }
+        .y-11x-17{
+            width: 14px;
+            height: 14px;
+            background-color: #738cac;
+        }
+        .y-11x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #757e95;
+        }
+        .y-11x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #7590b2;
+        }
+        .y-11x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #7a9bc1;
+        }
+        .y-11x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #7a9bc1;
+        }
+        .y-11x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #7a9bc1;
+        }
+        .y-11x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #7b9bc0;
+        }
+        .y-11x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #829bbb;
+        }
+        .y-12x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #99a1b5;
+        }
+        .y-12x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #899bb7;
+        }
+        .y-12x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #819cbb;
+        }
+        .y-12x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #7e9bbc;
+        }
+        .y-12x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #7696b8;
+        }
+        .y-12x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #7696b9;
+        }
+        .y-12x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #828ba2;
+        }
+        .y-12x-7{
+            width: 14px;
+            height: 14px;
+            background-color: #7d8da6;
+        }
+        .y-12x-8{
+            width: 15px;
+            height: 15px;
+            background-color: #7d8fa9;
+        }
+        .y-12x-9{
+            width: 16px;
+            height: 16px;
+            background-color: #7c8aa1;
+        }
+        .y-12x-10{
+            width: 17px;
+            height: 17px;
+            background-color: #7d879d;
+        }
+        .y-12x-11{
+            width: 18px;
+            height: 18px;
+            background-color: #7d899c;
+        }
+        .y-12x-12{
+            width: 19px;
+            height: 19px;
+            background-color: #848994;
+        }
+        .y-12x-13{
+            width: 18px;
+            height: 18px;
+            background-color: #858892;
+        }
+        .y-12x-14{
+            width: 17px;
+            height: 17px;
+            background-color: #878d9b;
+        }
+        .y-12x-15{
+            width: 16px;
+            height: 16px;
+            background-color: #7f8aa0;
+        }
+        .y-12x-16{
+            width: 15px;
+            height: 15px;
+            background-color: #808a9f;
+        }
+        .y-12x-17{
+            width: 14px;
+            height: 14px;
+            background-color: #7689a3;
+        }
+        .y-12x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #7b869d;
+        }
+        .y-12x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #7990ae;
+        }
+        .y-12x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #7c9cbf;
+        }
+        .y-12x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #7c9cbf;
+        }
+        .y-12x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #7c9cbf;
+        }
+        .y-12x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #7d9cbe;
+        }
+        .y-12x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #7d9cbe;
+        }
+        .y-13x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #849dba;
+        }
+        .y-13x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #819dbb;
+        }
+        .y-13x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #819dbb;
+        }
+        .y-13x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #7f9cba;
+        }
+        .y-13x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #7a98b7;
+        }
+        .y-13x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #7a98b8;
+        }
+        .y-13x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #7e899e;
+        }
+        .y-13x-7{
+            width: 14px;
+            height: 14px;
+            background-color: #7e91a9;
+        }
+        .y-13x-8{
+            width: 15px;
+            height: 15px;
+            background-color: #829cb9;
+        }
+        .y-13x-9{
+            width: 16px;
+            height: 16px;
+            background-color: #8094b0;
+        }
+        .y-13x-10{
+            width: 17px;
+            height: 17px;
+            background-color: #7d8ea7;
+        }
+        .y-13x-11{
+            width: 18px;
+            height: 18px;
+            background-color: #7e93ad;
+        }
+        .y-13x-12{
+            width: 18px;
+            height: 18px;
+            background-color: #7e8490;
+        }
+        .y-13x-13{
+            width: 18px;
+            height: 18px;
+            background-color: #787475;
+        }
+        .y-13x-14{
+            width: 17px;
+            height: 17px;
+            background-color: #646872;
+        }
+        .y-13x-15{
+            width: 16px;
+            height: 16px;
+            background-color: #78869b;
+        }
+        .y-13x-16{
+            width: 15px;
+            height: 15px;
+            background-color: #76849b;
+        }
+        .y-13x-17{
+            width: 14px;
+            height: 14px;
+            background-color: #788aa3;
+        }
+        .y-13x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #7c8aa0;
+        }
+        .y-13x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #7b8ea9;
+        }
+        .y-13x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #809dbd;
+        }
+        .y-13x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #809cbc;
+        }
+        .y-13x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #819dbc;
+        }
+        .y-13x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #819dbc;
+        }
+        .y-13x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #819ebd;
+        }
+        .y-14x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #839eba;
+        }
+        .y-14x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #839ebb;
+        }
+        .y-14x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #839ebb;
+        }
+        .y-14x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #829cb9;
+        }
+        .y-14x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #7e99b7;
+        }
+        .y-14x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #7e9ab7;
+        }
+        .y-14x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #827e8d;
+        }
+        .y-14x-7{
+            width: 14px;
+            height: 14px;
+            background-color: #76849a;
+        }
+        .y-14x-8{
+            width: 15px;
+            height: 15px;
+            background-color: #7d94ae;
+        }
+        .y-14x-9{
+            width: 16px;
+            height: 16px;
+            background-color: #8193ad;
+        }
+        .y-14x-10{
+            width: 17px;
+            height: 17px;
+            background-color: #828fa4;
+        }
+        .y-14x-11{
+            width: 17px;
+            height: 17px;
+            background-color: #7f8fa6;
+        }
+        .y-14x-12{
+            width: 17px;
+            height: 17px;
+            background-color: #6e6b6f;
+        }
+        .y-14x-13{
+            width: 17px;
+            height: 17px;
+            background-color: #696466;
+        }
+        .y-14x-14{
+            width: 17px;
+            height: 17px;
+            background-color: #3d3d45;
+        }
+        .y-14x-15{
+            width: 16px;
+            height: 16px;
+            background-color: #797b85;
+        }
+        .y-14x-16{
+            width: 15px;
+            height: 15px;
+            background-color: #888795;
+        }
+        .y-14x-17{
+            width: 14px;
+            height: 14px;
+            background-color: #8f93a3;
+        }
+        .y-14x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #868ea1;
+        }
+        .y-14x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #8391a9;
+        }
+        .y-14x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #849fbc;
+        }
+        .y-14x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #849ebc;
+        }
+        .y-14x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #849ebb;
+        }
+        .y-14x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #849fbc;
+        }
+        .y-14x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #849fbd;
+        }
+        .y-15x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #87a0b9;
+        }
+        .y-15x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #87a0ba;
+        }
+        .y-15x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #86a0ba;
+        }
+        .y-15x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #869eb8;
+        }
+        .y-15x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #829bb5;
+        }
+        .y-15x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #829ab5;
+        }
+        .y-15x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #888a9a;
+        }
+        .y-15x-7{
+            width: 14px;
+            height: 14px;
+            background-color: #7d8a9f;
+        }
+        .y-15x-8{
+            width: 15px;
+            height: 15px;
+            background-color: #8498b0;
+        }
+        .y-15x-9{
+            width: 16px;
+            height: 16px;
+            background-color: #8792a7;
+        }
+        .y-15x-10{
+            width: 16px;
+            height: 16px;
+            background-color: #858ea1;
+        }
+        .y-15x-11{
+            width: 16px;
+            height: 16px;
+            background-color: #8b96a7;
+        }
+        .y-15x-12{
+            width: 16px;
+            height: 16px;
+            background-color: #8a878a;
+        }
+        .y-15x-13{
+            width: 16px;
+            height: 16px;
+            background-color: #82838b;
+        }
+        .y-15x-14{
+            width: 16px;
+            height: 16px;
+            background-color: #54575f;
+        }
+        .y-15x-15{
+            width: 16px;
+            height: 16px;
+            background-color: #6a6c77;
+        }
+        .y-15x-16{
+            width: 15px;
+            height: 15px;
+            background-color: #8c8a92;
+        }
+        .y-15x-17{
+            width: 14px;
+            height: 14px;
+            background-color: #8f8c93;
+        }
+        .y-15x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #949298;
+        }
+        .y-15x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #9e9ba2;
+        }
+        .y-15x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #909bae;
+        }
+        .y-15x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #879eb8;
+        }
+        .y-15x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #87a0bb;
+        }
+        .y-15x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #87a1bb;
+        }
+        .y-15x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #87a1bc;
+        }
+        .y-16x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #8aa1b8;
+        }
+        .y-16x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #8aa1b9;
+        }
+        .y-16x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #8aa1b9;
+        }
+        .y-16x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #889fb7;
+        }
+        .y-16x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #859cb3;
+        }
+        .y-16x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #859cb4;
+        }
+        .y-16x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #7f8798;
+        }
+        .y-16x-7{
+            width: 14px;
+            height: 14px;
+            background-color: #7c8193;
+        }
+        .y-16x-8{
+            width: 15px;
+            height: 15px;
+            background-color: #8a91a0;
+        }
+        .y-16x-9{
+            width: 15px;
+            height: 15px;
+            background-color: #95a1b0;
+        }
+        .y-16x-10{
+            width: 15px;
+            height: 15px;
+            background-color: #9195a1;
+        }
+        .y-16x-11{
+            width: 15px;
+            height: 15px;
+            background-color: #8e929e;
+        }
+        .y-16x-12{
+            width: 15px;
+            height: 15px;
+            background-color: #8a8b90;
+        }
+        .y-16x-13{
+            width: 15px;
+            height: 15px;
+            background-color: #7e838b;
+        }
+        .y-16x-14{
+            width: 15px;
+            height: 15px;
+            background-color: #65666d;
+        }
+        .y-16x-15{
+            width: 15px;
+            height: 15px;
+            background-color: #716f75;
+        }
+        .y-16x-16{
+            width: 15px;
+            height: 15px;
+            background-color: #837e84;
+        }
+        .y-16x-17{
+            width: 14px;
+            height: 14px;
+            background-color: #908b91;
+        }
+        .y-16x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #96939b;
+        }
+        .y-16x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #858795;
+        }
+        .y-16x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #8793a7;
+        }
+        .y-16x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #879cb3;
+        }
+        .y-16x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #8aa0b9;
+        }
+        .y-16x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #889fb7;
+        }
+        .y-16x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #8aa2ba;
+        }
+        .y-17x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #8ea2b6;
+        }
+        .y-17x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #8da2b7;
+        }
+        .y-17x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #8da2b7;
+        }
+        .y-17x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #8ba0b4;
+        }
+        .y-17x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #8999ac;
+        }
+        .y-17x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #8d9bad;
+        }
+        .y-17x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #8d858e;
+        }
+        .y-17x-7{
+            width: 14px;
+            height: 14px;
+            background-color: #8a909d;
+        }
+        .y-17x-8{
+            width: 14px;
+            height: 14px;
+            background-color: #9b9fa9;
+        }
+        .y-17x-9{
+            width: 14px;
+            height: 14px;
+            background-color: #9799a0;
+        }
+        .y-17x-10{
+            width: 14px;
+            height: 14px;
+            background-color: #9495a0;
+        }
+        .y-17x-11{
+            width: 14px;
+            height: 14px;
+            background-color: #8d8b93;
+        }
+        .y-17x-12{
+            width: 14px;
+            height: 14px;
+            background-color: #828389;
+        }
+        .y-17x-13{
+            width: 14px;
+            height: 14px;
+            background-color: #777c86;
+        }
+        .y-17x-14{
+            width: 14px;
+            height: 14px;
+            background-color: #686b73;
+        }
+        .y-17x-15{
+            width: 14px;
+            height: 14px;
+            background-color: #63636a;
+        }
+        .y-17x-16{
+            width: 14px;
+            height: 14px;
+            background-color: #7c7f8a;
+        }
+        .y-17x-17{
+            width: 14px;
+            height: 14px;
+            background-color: #7e8490;
+        }
+        .y-17x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #81818c;
+        }
+        .y-17x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #8a95a5;
+        }
+        .y-17x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #8ea1b6;
+        }
+        .y-17x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #8da1b5;
+        }
+        .y-17x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #8da1b6;
+        }
+        .y-17x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #8da1b6;
+        }
+        .y-17x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #8da0b5;
+        }
+        .y-18x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #90a2b3;
+        }
+        .y-18x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #90a2b3;
+        }
+        .y-18x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #90a1b2;
+        }
+        .y-18x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #8d9faf;
+        }
+        .y-18x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #8b9bab;
+        }
+        .y-18x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #8d9aa9;
+        }
+        .y-18x-6{
+            width: 13px;
+            height: 13px;
+            background-color: #928f99;
+        }
+        .y-18x-7{
+            width: 13px;
+            height: 13px;
+            background-color: #7e7882;
+        }
+        .y-18x-8{
+            width: 13px;
+            height: 13px;
+            background-color: #93919a;
+        }
+        .y-18x-9{
+            width: 13px;
+            height: 13px;
+            background-color: #8b929f;
+        }
+        .y-18x-10{
+            width: 13px;
+            height: 13px;
+            background-color: #92959f;
+        }
+        .y-18x-11{
+            width: 13px;
+            height: 13px;
+            background-color: #8a868d;
+        }
+        .y-18x-12{
+            width: 13px;
+            height: 13px;
+            background-color: #8f8e94;
+        }
+        .y-18x-13{
+            width: 13px;
+            height: 13px;
+            background-color: #777980;
+        }
+        .y-18x-14{
+            width: 13px;
+            height: 13px;
+            background-color: #7c7b81;
+        }
+        .y-18x-15{
+            width: 13px;
+            height: 13px;
+            background-color: #727076;
+        }
+        .y-18x-16{
+            width: 13px;
+            height: 13px;
+            background-color: #7b7c85;
+        }
+        .y-18x-17{
+            width: 13px;
+            height: 13px;
+            background-color: #7b848f;
+        }
+        .y-18x-18{
+            width: 13px;
+            height: 13px;
+            background-color: #898b94;
+        }
+        .y-18x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #8a96a5;
+        }
+        .y-18x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #90a1b2;
+        }
+        .y-18x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #90a1b2;
+        }
+        .y-18x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #90a1b2;
+        }
+        .y-18x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #90a1b2;
+        }
+        .y-18x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #90a1b2;
+        }
+        .y-19x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #92a1ae;
+        }
+        .y-19x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #92a1ae;
+        }
+        .y-19x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #91a1ae;
+        }
+        .y-19x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #8f9eac;
+        }
+        .y-19x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #8d9ba8;
+        }
+        .y-19x-5{
+            width: 12px;
+            height: 12px;
+            background-color: #8d9ba9;
+        }
+        .y-19x-6{
+            width: 12px;
+            height: 12px;
+            background-color: #8d9aa7;
+        }
+        .y-19x-7{
+            width: 12px;
+            height: 12px;
+            background-color: #7f737b;
+        }
+        .y-19x-8{
+            width: 12px;
+            height: 12px;
+            background-color: #868e99;
+        }
+        .y-19x-9{
+            width: 12px;
+            height: 12px;
+            background-color: #8d959f;
+        }
+        .y-19x-10{
+            width: 12px;
+            height: 12px;
+            background-color: #92989f;
+        }
+        .y-19x-11{
+            width: 12px;
+            height: 12px;
+            background-color: #989095;
+        }
+        .y-19x-12{
+            width: 12px;
+            height: 12px;
+            background-color: #8f8589;
+        }
+        .y-19x-13{
+            width: 12px;
+            height: 12px;
+            background-color: #6c696f;
+        }
+        .y-19x-14{
+            width: 12px;
+            height: 12px;
+            background-color: #736f75;
+        }
+        .y-19x-15{
+            width: 12px;
+            height: 12px;
+            background-color: #777278;
+        }
+        .y-19x-16{
+            width: 12px;
+            height: 12px;
+            background-color: #797a80;
+        }
+        .y-19x-17{
+            width: 12px;
+            height: 12px;
+            background-color: #7f858e;
+        }
+        .y-19x-18{
+            width: 12px;
+            height: 12px;
+            background-color: #7a7379;
+        }
+        .y-19x-19{
+            width: 12px;
+            height: 12px;
+            background-color: #919dab;
+        }
+        .y-19x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #94a1ae;
+        }
+        .y-19x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #93a1af;
+        }
+        .y-19x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #92a1af;
+        }
+        .y-19x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #92a1ae;
+        }
+        .y-19x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #939fab;
+        }
+        .y-20x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #939fa9;
+        }
+        .y-20x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #939fa9;
+        }
+        .y-20x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #929faa;
+        }
+        .y-20x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #909da7;
+        }
+        .y-20x-4{
+            width: 11px;
+            height: 11px;
+            background-color: #8e9aa4;
+        }
+        .y-20x-5{
+            width: 11px;
+            height: 11px;
+            background-color: #8e9aa4;
+        }
+        .y-20x-6{
+            width: 11px;
+            height: 11px;
+            background-color: #8e9aa4;
+        }
+        .y-20x-7{
+            width: 11px;
+            height: 11px;
+            background-color: #848087;
+        }
+        .y-20x-8{
+            width: 11px;
+            height: 11px;
+            background-color: #87858d;
+        }
+        .y-20x-9{
+            width: 11px;
+            height: 11px;
+            background-color: #87878f;
+        }
+        .y-20x-10{
+            width: 11px;
+            height: 11px;
+            background-color: #8e9196;
+        }
+        .y-20x-11{
+            width: 11px;
+            height: 11px;
+            background-color: #898285;
+        }
+        .y-20x-12{
+            width: 11px;
+            height: 11px;
+            background-color: #84767b;
+        }
+        .y-20x-13{
+            width: 11px;
+            height: 11px;
+            background-color: #656168;
+        }
+        .y-20x-14{
+            width: 11px;
+            height: 11px;
+            background-color: #60595e;
+        }
+        .y-20x-15{
+            width: 11px;
+            height: 11px;
+            background-color: #605d63;
+        }
+        .y-20x-16{
+            width: 11px;
+            height: 11px;
+            background-color: #6f7279;
+        }
+        .y-20x-17{
+            width: 11px;
+            height: 11px;
+            background-color: #7b8087;
+        }
+        .y-20x-18{
+            width: 11px;
+            height: 11px;
+            background-color: #7e787e;
+        }
+        .y-20x-19{
+            width: 11px;
+            height: 11px;
+            background-color: #949ea9;
+        }
+        .y-20x-20{
+            width: 11px;
+            height: 11px;
+            background-color: #949fa9;
+        }
+        .y-20x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #979ea7;
+        }
+        .y-20x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #929da8;
+        }
+        .y-20x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #94a0a9;
+        }
+        .y-20x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #99a1a9;
+        }
+        .y-21x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #939da4;
+        }
+        .y-21x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #939da5;
+        }
+        .y-21x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #939ba2;
+        }
+        .y-21x-3{
+            width: 10px;
+            height: 10px;
+            background-color: #8e969d;
+        }
+        .y-21x-4{
+            width: 10px;
+            height: 10px;
+            background-color: #8e979f;
+        }
+        .y-21x-5{
+            width: 10px;
+            height: 10px;
+            background-color: #8e989f;
+        }
+        .y-21x-6{
+            width: 10px;
+            height: 10px;
+            background-color: #8f99a0;
+        }
+        .y-21x-7{
+            width: 10px;
+            height: 10px;
+            background-color: #87848a;
+        }
+        .y-21x-8{
+            width: 10px;
+            height: 10px;
+            background-color: #847980;
+        }
+        .y-21x-9{
+            width: 10px;
+            height: 10px;
+            background-color: #898a90;
+        }
+        .y-21x-10{
+            width: 10px;
+            height: 10px;
+            background-color: #919297;
+        }
+        .y-21x-11{
+            width: 10px;
+            height: 10px;
+            background-color: #898a8d;
+        }
+        .y-21x-12{
+            width: 10px;
+            height: 10px;
+            background-color: #817a7d;
+        }
+        .y-21x-13{
+            width: 10px;
+            height: 10px;
+            background-color: #696269;
+        }
+        .y-21x-14{
+            width: 10px;
+            height: 10px;
+            background-color: #656064;
+        }
+        .y-21x-15{
+            width: 10px;
+            height: 10px;
+            background-color: #737278;
+        }
+        .y-21x-16{
+            width: 10px;
+            height: 10px;
+            background-color: #818083;
+        }
+        .y-21x-17{
+            width: 10px;
+            height: 10px;
+            background-color: #7a767a;
+        }
+        .y-21x-18{
+            width: 10px;
+            height: 10px;
+            background-color: #837c7f;
+        }
+        .y-21x-19{
+            width: 10px;
+            height: 10px;
+            background-color: #969ba3;
+        }
+        .y-21x-20{
+            width: 10px;
+            height: 10px;
+            background-color: #959aa3;
+        }
+        .y-21x-21{
+            width: 10px;
+            height: 10px;
+            background-color: #949aa2;
+        }
+        .y-21x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #9a9da3;
+        }
+        .y-21x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #979ba2;
+        }
+        .y-21x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #9f9fa2;
+        }
+        .y-22x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #92989e;
+        }
+        .y-22x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #92989e;
+        }
+        .y-22x-2{
+            width: 9px;
+            height: 9px;
+            background-color: #97999d;
+        }
+        .y-22x-3{
+            width: 9px;
+            height: 9px;
+            background-color: #8d9297;
+        }
+        .y-22x-4{
+            width: 9px;
+            height: 9px;
+            background-color: #8e8b8e;
+        }
+        .y-22x-5{
+            width: 9px;
+            height: 9px;
+            background-color: #939295;
+        }
+        .y-22x-6{
+            width: 9px;
+            height: 9px;
+            background-color: #909499;
+        }
+        .y-22x-7{
+            width: 9px;
+            height: 9px;
+            background-color: #949094;
+        }
+        .y-22x-8{
+            width: 9px;
+            height: 9px;
+            background-color: #7d7478;
+        }
+        .y-22x-9{
+            width: 9px;
+            height: 9px;
+            background-color: #867b7f;
+        }
+        .y-22x-10{
+            width: 9px;
+            height: 9px;
+            background-color: #908b8f;
+        }
+        .y-22x-11{
+            width: 9px;
+            height: 9px;
+            background-color: #848387;
+        }
+        .y-22x-12{
+            width: 9px;
+            height: 9px;
+            background-color: #848385;
+        }
+        .y-22x-13{
+            width: 9px;
+            height: 9px;
+            background-color: #5d5f65;
+        }
+        .y-22x-14{
+            width: 9px;
+            height: 9px;
+            background-color: #6e6d71;
+        }
+        .y-22x-15{
+            width: 9px;
+            height: 9px;
+            background-color: #6e6d72;
+        }
+        .y-22x-16{
+            width: 9px;
+            height: 9px;
+            background-color: #797579;
+        }
+        .y-22x-17{
+            width: 9px;
+            height: 9px;
+            background-color: #6e666a;
+        }
+        .y-22x-18{
+            width: 9px;
+            height: 9px;
+            background-color: #898485;
+        }
+        .y-22x-19{
+            width: 9px;
+            height: 9px;
+            background-color: #94979d;
+        }
+        .y-22x-20{
+            width: 9px;
+            height: 9px;
+            background-color: #92959c;
+        }
+        .y-22x-21{
+            width: 9px;
+            height: 9px;
+            background-color: #90949b;
+        }
+        .y-22x-22{
+            width: 9px;
+            height: 9px;
+            background-color: #91949b;
+        }
+        .y-22x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #8d9299;
+        }
+        .y-22x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #8e929a;
+        }
+        .y-23x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #8d9093;
+        }
+        .y-23x-1{
+            width: 8px;
+            height: 8px;
+            background-color: #8e9092;
+        }
+        .y-23x-2{
+            width: 8px;
+            height: 8px;
+            background-color: #928e8e;
+        }
+        .y-23x-3{
+            width: 8px;
+            height: 8px;
+            background-color: #7f7f82;
+        }
+        .y-23x-4{
+            width: 8px;
+            height: 8px;
+            background-color: #8d898b;
+        }
+        .y-23x-5{
+            width: 8px;
+            height: 8px;
+            background-color: #817e80;
+        }
+        .y-23x-6{
+            width: 8px;
+            height: 8px;
+            background-color: #8c8f92;
+        }
+        .y-23x-7{
+            width: 8px;
+            height: 8px;
+            background-color: #8b8a8b;
+        }
+        .y-23x-8{
+            width: 8px;
+            height: 8px;
+            background-color: #7f6c6d;
+        }
+        .y-23x-9{
+            width: 8px;
+            height: 8px;
+            background-color: #756669;
+        }
+        .y-23x-10{
+            width: 8px;
+            height: 8px;
+            background-color: #8c8081;
+        }
+        .y-23x-11{
+            width: 8px;
+            height: 8px;
+            background-color: #898080;
+        }
+        .y-23x-12{
+            width: 8px;
+            height: 8px;
+            background-color: #868182;
+        }
+        .y-23x-13{
+            width: 8px;
+            height: 8px;
+            background-color: #635f62;
+        }
+        .y-23x-14{
+            width: 8px;
+            height: 8px;
+            background-color: #878586;
+        }
+        .y-23x-15{
+            width: 8px;
+            height: 8px;
+            background-color: #717176;
+        }
+        .y-23x-16{
+            width: 8px;
+            height: 8px;
+            background-color: #80797c;
+        }
+        .y-23x-17{
+            width: 8px;
+            height: 8px;
+            background-color: #736869;
+        }
+        .y-23x-18{
+            width: 8px;
+            height: 8px;
+            background-color: #929193;
+        }
+        .y-23x-19{
+            width: 8px;
+            height: 8px;
+            background-color: #9b9a9b;
+        }
+        .y-23x-20{
+            width: 8px;
+            height: 8px;
+            background-color: #959394;
+        }
+        .y-23x-21{
+            width: 8px;
+            height: 8px;
+            background-color: #959392;
+        }
+        .y-23x-22{
+            width: 8px;
+            height: 8px;
+            background-color: #949190;
+        }
+        .y-23x-23{
+            width: 8px;
+            height: 8px;
+            background-color: #aca7a2;
+        }
+        .y-23x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #c2b7ac;
+        }
+        .y-24x-0{
+            width: 7px;
+            height: 7px;
+            background-color: #424040;
+        }
+        .y-24x-1{
+            width: 7px;
+            height: 7px;
+            background-color: #514d46;
+        }
+        .y-24x-2{
+            width: 7px;
+            height: 7px;
+            background-color: #504a45;
+        }
+        .y-24x-3{
+            width: 7px;
+            height: 7px;
+            background-color: #4d4a47;
+        }
+        .y-24x-4{
+            width: 7px;
+            height: 7px;
+            background-color: #5e5653;
+        }
+        .y-24x-5{
+            width: 7px;
+            height: 7px;
+            background-color: #514947;
+        }
+        .y-24x-6{
+            width: 7px;
+            height: 7px;
+            background-color: #55524d;
+        }
+        .y-24x-7{
+            width: 7px;
+            height: 7px;
+            background-color: #6d6760;
+        }
+        .y-24x-8{
+            width: 7px;
+            height: 7px;
+            background-color: #7e6c67;
+        }
+        .y-24x-9{
+            width: 7px;
+            height: 7px;
+            background-color: #725b57;
+        }
+        .y-24x-10{
+            width: 7px;
+            height: 7px;
+            background-color: #755d59;
+        }
+        .y-24x-11{
+            width: 7px;
+            height: 7px;
+            background-color: #816157;
+        }
+        .y-24x-12{
+            width: 7px;
+            height: 7px;
+            background-color: #7a6661;
+        }
+        .y-24x-13{
+            width: 7px;
+            height: 7px;
+            background-color: #6c554f;
+        }
+        .y-24x-14{
+            width: 7px;
+            height: 7px;
+            background-color: #614f4c;
+        }
+        .y-24x-15{
+            width: 7px;
+            height: 7px;
+            background-color: #524240;
+        }
+        .y-24x-16{
+            width: 7px;
+            height: 7px;
+            background-color: #6e5c5c;
+        }
+        .y-24x-17{
+            width: 7px;
+            height: 7px;
+            background-color: #564843;
+        }
+        .y-24x-18{
+            width: 7px;
+            height: 7px;
+            background-color: #6f6762;
+        }
+        .y-24x-19{
+            width: 7px;
+            height: 7px;
+            background-color: #797470;
+        }
+        .y-24x-20{
+            width: 7px;
+            height: 7px;
+            background-color: #847a72;
+        }
+        .y-24x-21{
+            width: 7px;
+            height: 7px;
+            background-color: #9d8c7c;
+        }
+        .y-24x-22{
+            width: 7px;
+            height: 7px;
+            background-color: #a18f7e;
+        }
+        .y-24x-23{
+            width: 7px;
+            height: 7px;
+            background-color: #ae9c8b;
+        }
+        .y-24x-24{
+            width: 7px;
+            height: 7px;
+            background-color: #ae9b8b;
+        }
+    </style>
+</body>
+</html>
