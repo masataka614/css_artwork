@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sunrise</title>
+</head>
+<body>
+    <div class="base">
+        <div class="sun"></div>
+        <div class="afterglow-top"></div>
+        <div class="afterglow-bottom"></div>
+        <div class="sky"></div>
+        <div class="ground"></div>
+    </div>
+    <style>
+        .base {
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+        }
+        .sun {
+            width: 160px;
+            height: 130px;
+            border-radius: 50%;
+            background: #fbfaf5;
+            opacity: 0.8;
+            top: 280px;
+            left: 170px;
+            position: absolute;
+            z-index: 2;
+        }
+        .afterglow-top {
+            width: 500px;
+            height: 150px;
+            background-color: #fbfaf5;
+            opacity: 0.05;
+            position: absolute;
+            z-index: 3;
+        }
+        .afterglow-bottom {
+            border-top: 220px solid #fbfaf5;
+            border-right: 250px solid transparent;
+            border-left: 250px solid transparent;
+            opacity: 0.05;
+            position: absolute;
+            top: 150px;
+            z-index: 3;
+        }
+        .sky {
+            width: 500px;
+            height: 300px;
+            background: linear-gradient(
+                #0d0015,
+                #223a70,
+                #223a70,
+                #165e83,
+                #eb6101
+            );
+            z-index: 1;
+        }
+        .ground {
+            width: 500px;
+            height: 200px;
+            background: linear-gradient(
+                #0d0015,
+                #223a70,
+                #223a70,
+                #223a70,
+                #c0c6c9
+            );
+            position: absolute;
+            z-index: 4;
+        }
+    </style>
+</body>
+</html>
