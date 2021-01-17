@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stripes</title>
+</head>
+<body>
+    <div class="base center odd-color" id="base">
+    </div>
+    <script>
+        const elements = document.createDocumentFragment();
+        let topElements = elements;
+        const sizeBase = 490;
+        const decreaseNum = 10;
+
+        for (let i = 0; i < 49; i++) {
+            const div = document.createElement("div");
+
+            div.className = "tilt center ";
+
+            if (i % 2 === 0) {
+                div.className += "even-color";
+            } else {
+                div.className += "odd-color";
+            }
+
+            const num = i * decreaseNum;
+            const size = sizeBase - num;
+            const sizeStr = size.toString() + "px;";
+
+            div.style = "width:" + sizeStr + "height:" + sizeStr;
+
+            topElements.appendChild(div);
+            topElements = div;
+        }
+
+        document.getElementById("base").appendChild(elements);
+    </script>
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .base {
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+
+        }
+        .tilt {
+            transform: rotate(1deg);
+        }
+        .even-color {
+            background-color: #dbd0e6;
+        }
+        .odd-color {
+            background-color: #a6c8b2;
+        }
+    </style>
+</body>
+</html>
