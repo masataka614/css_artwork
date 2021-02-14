@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+</head>
+<body>
+    <div class="base">
+        <div class="chocolate" id="chocolate"></div>
+        <div class="clock">
+            <div class="center long-hand-position">
+                <div class="long-hand"></div>
+            </div>
+            <div class="center short-hand-position">
+                <div class="short-hand"></div>
+            </div>
+            <div class="center dial clock-1">Ⅰ</div>
+            <div class="center dial clock-2">Ⅱ</div>
+            <div class="center dial clock-3">Ⅲ</div>
+            <div class="center dial clock-4">Ⅳ</div>
+            <div class="center dial clock-5">Ⅴ</div>
+            <div class="center dial clock-6">Ⅵ</div>
+            <div class="center dial clock-7">Ⅶ</div>
+            <div class="center dial clock-8">Ⅷ</div>
+            <div class="center dial clock-9">Ⅸ</div>
+            <div class="center dial clock-10">Ⅹ</div>
+            <div class="center dial clock-11">Ⅺ</div>
+            <div class="center dial clock-12">Ⅻ</div>
+        </div>
+    </div>
+    <script>
+        const elements = document.createDocumentFragment();
+
+        let leftVal = -30;
+
+        for (let x = 0; x < 8; x++) {
+            const rowDiv = document.createElement("div");
+
+            rowDiv.className = "row";
+
+            rowDiv.style = "left:" + leftVal.toString() + "px;";
+
+            leftVal += 70;
+
+            for (let y = 0; y < 5; y++) {
+                const colDiv = document.createElement("div");
+
+                colDiv.className = "piece-of-chocolate";
+
+                rowDiv.appendChild(colDiv);
+            }
+
+            elements.appendChild(rowDiv);
+        }
+
+        document.getElementById("chocolate").appendChild(elements);
+    </script>
+    <style>
+        .base {
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+        }
+        .chocolate {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            overflow: hidden;
+        }
+        .row {
+            position: absolute;
+        }
+        .piece-of-chocolate {
+            width: 70px;
+            height: 100px;
+            background: linear-gradient(
+                    125deg,
+                    #593c27 0%,
+                    #592b0b 100%
+                );
+        }
+        .clock {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .center {
+            width: 500px;
+            height: 470px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+        }
+        .long-hand-position {
+            transform: rotate(72deg);
+        }
+        .short-hand-position {
+            transform: rotate(300deg);
+        }
+
+        .long-hand {
+            top: 25px;
+            width: 15px;
+            height: 230px;
+            background-color: #331718;
+            position: absolute;
+        }
+        .short-hand {
+            top: 85px;
+            width: 15px;
+            height: 170px;
+            background-color: #331718;
+            position: absolute;
+        }
+        .dial {
+            border: 10px solid #9e1e1c;
+            color: #edbebf;
+            font-size: 40px;
+        }
+        .clock-1 {
+            transform: rotate(30deg);
+        }
+        .clock-2 {
+            transform: rotate(60deg);
+        }
+        .clock-3 {
+            transform: rotate(90deg);
+        }
+        .clock-4 {
+            transform: rotate(120deg);
+        }
+        .clock-5 {
+            transform: rotate(150deg);
+        }
+        .clock-6 {
+            transform: rotate(180deg);
+        }
+        .clock-7 {
+            transform: rotate(210deg);
+        }
+        .clock-8 {
+            transform: rotate(240deg);
+        }
+        .clock-9 {
+            transform: rotate(270deg);
+        }
+        .clock-10 {
+            transform: rotate(300deg);
+        }
+        .clock-11 {
+            transform: rotate(330deg);
+        }
+        .clock-12 {
+            transform: rotate(360deg);
+        }
+    </style>
+</body>
+</html>
