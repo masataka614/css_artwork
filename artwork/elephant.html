@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>elephant</title>
+</head>
+<body>
+    <div class="base">
+        <div class="frame orange">
+            <div class="elephant blue">
+                <div class="face"></div>
+                <div class="ear left">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="ear right blue">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="nose">
+                    <div class="top"></div>
+                    <div class="middle"></div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+        </div>
+        <div class="frame blue">
+            <div class="elephant orange">
+                <div class="face"></div>
+                <div class="ear left">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="ear right orange">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="nose">
+                    <div class="top"></div>
+                    <div class="middle"></div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+        </div>
+        <div class="frame blue">
+            <div class="elephant orange">
+                <div class="face"></div>
+                <div class="ear left">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="ear right orange">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="nose">
+                    <div class="top"></div>
+                    <div class="middle"></div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+        </div>
+        <div class="frame orange">
+            <div class="elephant blue">
+                <div class="face"></div>
+                <div class="ear left">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="ear right blue">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="nose">
+                    <div class="top"></div>
+                    <div class="middle"></div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .base {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+        }
+        .frame {
+            width: 250px;
+            height: 250px;
+        }
+        .frame.orange {
+            background-color: #e6b422;
+        }
+        .frame.blue {
+            background-color: #007bbb;
+        }
+
+        .elephant {
+            position: absolute;
+        }
+        .elephant .face {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            top: 50px;
+            left: 100px;
+            z-index: 1;
+        }
+        .elephant .face:before,
+        .elephant .face:after {
+            position: absolute;
+            top: 0;
+            width: 0;
+            height: 0;
+            content: "";
+            border: 50px solid transparent;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+        }
+        .elephant .face:before {
+            right: 100%;
+        }
+        .elephant .face:after {
+            left: 100%;
+        }
+        .elephant .ear.left {
+            position: absolute;
+            top: 55px;
+            left: 150px;
+        }
+        .elephant .ear.right {
+            position: absolute;
+            top: 55px;
+            left: 30px;
+        }
+        .elephant .ear .top {
+            position: absolute;
+            width: 70px;
+            height: 50px;
+        }
+        .elephant .ear .bottom {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 25px;
+            left: 10px;
+        }
+        .elephant .ear .bottom:before,
+        .elephant .ear .bottom:after {
+            position: absolute;
+            top: 0;
+            width: 0;
+            height: 0;
+            content: "";
+            border: 25px solid transparent;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+        }
+        .elephant .ear .bottom:before {
+            right: 100%;
+        }
+        .elephant .ear .bottom:after {
+            left: 100%;
+        }
+        .elephant .nose {
+            position: absolute;
+            top: 150px;
+            left: 115px;
+        }
+        .elephant .nose .top {
+            position: absolute;
+            width: 20px;
+            height: 50px;
+        }
+        .elephant .nose .middle {
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            top: 50px;
+        }
+        .elephant .nose .bottom {
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            top: 30px;
+            left: 30px;
+        }
+        .elephant.blue .face,
+        .elephant.blue .nose *{
+            background-color: #007bbb;
+        }
+        .elephant.blue .face::before {
+            border-right-color:#007bbb;
+        }
+        .elephant.blue .face::after {
+            border-left-color: #007bbb;
+        }
+        .elephant.blue .ear *{
+            background-color: #2688bb;
+        }
+        .elephant.blue .ear .bottom::before {
+            border-right-color:#2688bb;
+        }
+        .elephant.blue .ear .bottom::after {
+            border-left-color: #2688bb;
+        }
+        .elephant.orange .face,
+        .elephant.orange .nose *{
+            background-color: #e6b422;
+        }
+        .elephant.orange .face::before {
+            border-right-color:#e6b422;
+        }
+        .elephant.orange .face::after {
+            border-left-color: #e6b422;
+        }
+        .elephant.orange .ear *{
+            background-color: #e6bf50;
+        }
+        .elephant.orange .ear .bottom::before {
+            border-right-color:#e6bf50;
+        }
+        .elephant.orange .ear .bottom::after {
+            border-left-color: #e6bf50;
+        }
+    </style>
+</body>
+</html>
