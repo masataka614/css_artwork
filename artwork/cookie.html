@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie</title>
+</head>
+<body>
+    <div class="base" id="base">
+    </div>
+    <script>
+        const elements = document.createDocumentFragment();
+
+        let leftVal = 9;
+
+        for (let y = 0; y < 5; y++) {
+            const rowDiv = document.createElement("div");
+            rowDiv.className = "row";
+
+            let rowDivStyle = "left:" + leftVal.toString() + "px;";
+
+            rowDiv.style = rowDivStyle;
+
+            leftVal += 100;
+
+            for (let x = 0; x < 5; x++) {
+                const cookieDiv = document.createElement("div");
+                const flavorCocoaDiv1 = document.createElement("div");
+                const flavorCocoaDiv2 = document.createElement("div");
+                const flavorPlaneDiv1 = document.createElement("div");
+                const flavorPlaneDiv2 = document.createElement("div");
+
+                cookieDiv.className = "cookie";
+                flavorCocoaDiv1.className = "flavor cocoa";
+                flavorCocoaDiv2.className = "flavor cocoa";
+                flavorPlaneDiv1.className = "flavor plane";
+                flavorPlaneDiv2.className = "flavor plane";
+
+                cookieDiv.appendChild(flavorCocoaDiv1);
+                cookieDiv.appendChild(flavorPlaneDiv1);
+                cookieDiv.appendChild(flavorPlaneDiv2);
+                cookieDiv.appendChild(flavorCocoaDiv2);
+                rowDiv.appendChild(cookieDiv);
+                elements.appendChild(rowDiv);
+            }
+        }
+
+        document.getElementById("base").appendChild(elements);
+    </script>
+    <style>
+        .base {
+            border: 1px solid #000000;
+            width: 500px;
+            height: 500px;
+            background-color: #f19ca7;
+        }
+        .row {
+            position: absolute;
+        }
+        .cookie {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100px;
+            height: 100px;
+            border-radius: 20%;
+            overflow: hidden;
+        }
+        .flavor {
+            width: 50px;
+            height: 50px;
+        }
+        .cookie .flavor.cocoa {
+            background-color: #9f6d42;
+        }
+        .cookie .flavor.plane {
+            background-color: #f9d36c;
+        }
+    </style>
+</body>
+</html>
